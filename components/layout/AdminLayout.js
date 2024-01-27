@@ -3,6 +3,7 @@ import styled from "styled-components";
 import colors from "@/constants/Colors";
 import Sidebar from "./SideBar";
 import Navbar from "./Navbar";
+import Footer from "./Footer";
 const Wrap = styled.div`
     background:${colors.background};box-sizing:border-box;display:flex;flex-direction:column;min-height:100vh;
     & .admin-layout-wrap{
@@ -20,7 +21,7 @@ const AdminLayout = (props) => {
             <Wrap>
                 <Navbar showSidebar={showSidebar} setShowSidebar={toggleSidebar}/>
                 <div className="admin-layout-wrap">
-                    <Sidebar page={props.page}/>
+                    <Sidebar page={props.page} showSidebar={showSidebar} setShowSidebar={toggleSidebar}/>
                     <div className="layout-content">{props.children}</div>
                 </div>
             </Wrap>

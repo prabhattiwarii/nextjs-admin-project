@@ -1,77 +1,9 @@
 import React,{useState} from "react";
 import Head from "next/head";
-import styled from "styled-components";
 import colors from "@/constants/Colors";
 import frontend from "@/constants/Frontend";
-import { passHideIcon,passShowIcon} from "@/helpers/Icon";
-import { hasValidationError, validationError,focusOnFeild} from "@/helpers/GlobalHelpers";
-
-const Wrap = styled.div`
-    max-width:${frontend.width};width:100%;margin:0 auto;padding:40px 20px;height:100vh;display:flex;align-items:center;position:relative;
-    & .login-wrap{
-        display:flex;max-width:1000px;width:100%;margin:0 auto;min-height:450px;overflow:hidden;border-radius:10px;box-shadow:${colors.shadow} 0px 0px 3px;
-        & .banner-wrap{width:50%;background:url(https://images.pexels.com/photos/3182773/pexels-photo-3182773.jpeg);background-repeat:no-repeat;background-size:cover};
-        & .form-wrap{
-            width:50%;padding:30px;display:flex;flex-direction:column;justify-content:center;
-            & .logo{width:40px;margin:0 auto;}
-            & h1{font-size:32px;color:${colors.black};text-align:center;margin:0 0 20px;}
-            & .login{
-                & .remember-wrap{
-                    display:flex;align-items:center;column-gap:10px;justify-content:space-between;
-                    & .remember{
-                        display:flex;align-items:center;column-gap:8px;cursor:pointer;
-                        & label{font-size:16px;color:${colors.black};cursor:pointer;}
-                    }
-                    & .forgot-wrap{
-                        & .link{
-                            color:${colors.blue};
-                            &:hover{text-decoration:underline;}
-                        }
-                    }
-                }
-                & .submit-wrap{
-                    display:flex;justify-content:center;
-                    & .btn-submit{font-size:16px;color:${colors.white};background:${colors.textblack};height:40px;padding:0 25px;display:flex;align-items:center;justify-content:center;border:none;border-radius:5px;cursor:pointer;margin:20px 0 0;}
-                }
-                & .bottom-wrap{
-                    font-size:16px;color:${colors.textblack};text-align:center;margin:20px 0 0;
-                    & .link{
-                        color:${colors.blue};
-                        &:hover{text-decoration:underline;}
-                    }
-                }
-            }
-        }
-    }
-    @media(max-width:992px){
-        max-width: 500px;
-        & .login-wrap{
-            flex-direction:column;align-items:center;
-            & .form-wrap{
-                width:100%;padding:30px;display:flex;flex-direction:column;justify-content:center;
-            }
-        }
-    }
-    @media(max-width:479px){
-        & .login-wrap{
-            & .form-wrap{
-                & h1{font-size:28px;}
-                & .login{
-                    & .remember-wrap{
-                        & .remember{
-                            column-gap:5px;
-                            & label{font-size:13px;}
-                        }
-                    }
-                    & .forgot-wrap{
-                        & .link{font-size:13px;}
-                    }
-                }
-            }
-        }
-    }
-`;
-
+import {passHideIcon,passShowIcon} from "@/helpers/Icon";
+import {hasValidationError, validationError,focusOnFeild} from "@/helpers/GlobalHelpers";
 const Login = () => {
     const [form, setForm] = useState({email: "", password: "", remember_me: false});
     const [errors,setErrors] = useState([]);
@@ -119,7 +51,7 @@ const Login = () => {
             <Head>
                 <title>{`Login — ${frontend.APP_NAME}`}</title>
             </Head>
-                <Wrap>
+                <div className="wrap">
                     <div className="login-wrap">
                         <div className="banner-wrap"/>
                         <div className="form-wrap">
@@ -161,7 +93,7 @@ const Login = () => {
                             </form>
                         </div>
                     </div>
-                </Wrap>
+                </div>
         </React.Fragment>
     );
 }

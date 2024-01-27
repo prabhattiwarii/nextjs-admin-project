@@ -1,5 +1,5 @@
 import colors from "@/constants/Colors";
-import { deleteIcon, downloadIcon, editIcon, historyIcon, sortIcon } from "@/helpers/Icon";
+import { deleteIcon, downloadIcon, editIcon,sortdownIcon, sortupIcon } from "@/helpers/Icon";
 import React from "react";
 import styled from "styled-components";
 
@@ -18,18 +18,20 @@ const Wrap = styled.div`
                 & .head{
                     & .row{
                         & .table-head{
-                            padding:5px 30px 5px 15px;background:${colors.darkBlue};color:${colors.white};font-size:16px;font-weight:400;border: 1px solid ${colors.borderlight};
-                            & .sort-icon{cursor:pointer}
+                            padding:5px 30px 5px 15px;background:${colors.darkBlue};color:${colors.white};font-size:16px;font-weight:400;border:1px solid ${colors.borderlight};
+                            & .sort-icon{cursor:pointer;display:inline-flex;flex-direction:column;
+                                & .upicon{transform:rotate(180deg);}
+                            }
                         }
                     }
                 }
                 & .table-body{
                     & .data{
-                        padding:20px 10px 10px ;border: 1px solid ${colors.borderlight};margin:0 !important;
+                        padding:20px 10px 10px ;border:1px solid ${colors.borderlight};margin:0 !important;
                         & .link{color:${colors.textblack};}
                     }
                     & .action{
-                        text-align: center;border: 1px solid ${colors.borderlight};
+                        text-align:center;border:1px solid ${colors.borderlight};
                         & .link-icon{color:${colors.white};border-color:${colors.darkBlue};background:${colors.darkBlue};border-radius:3px;};
                         & .btn{padding:12px 10px 7px;margin:0 5px 0 0;font-size:14px;}
                         & .delete-btn{background:${colors.red};}
@@ -60,9 +62,9 @@ const DataTable = () => {
                     <table className="table">
                         <thead className="head">
                             <tr className="row">
-                                <th className="table-head"><span className="sort-icon">{sortIcon({width:11,height:11,fill:colors.white})}</span> Name</th>
-                                <th className="table-head"><span className="sort-icon">{sortIcon({width:11,height:11,fill:colors.white})}</span> References</th>
-                                <th className="table-head"><span className="sort-icon">{sortIcon({width:11,height:11,fill:colors.white})}</span> Mobile</th>
+                                <th className="table-head"><span className="sort-icon">{sortupIcon({width:11,height:11,fill:colors.white})} {sortdownIcon({width:11,height:11,fill:colors.white})}</span> <span>Name</span></th>
+                                <th className="table-head"><span className="sort-icon">{sortupIcon({width:11,height:11,fill:colors.white})} {sortdownIcon({width:11,height:11,fill:colors.white})}</span> References</th>
+                                <th className="table-head"><span className="sort-icon">{sortupIcon({width:11,height:11,fill:colors.white})} {sortdownIcon({width:11,height:11,fill:colors.white})}</span> Mobile</th>
                                 <th className="table-head">Action</th>
                             </tr>
                         </thead>
