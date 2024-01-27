@@ -1,11 +1,10 @@
 import {useState} from "react"
 import styled from "styled-components";
-import colors from "@/constants/Colors";
 import Sidebar from "./SideBar";
 import Navbar from "./Navbar";
-import Footer from "./Footer";
+
 const Wrap = styled.div`
-    background:${colors.background};box-sizing:border-box;display:flex;flex-direction:column;min-height:100vh;
+    background:rgb(236, 240, 245);box-sizing:border-box;display:flex;flex-direction:column;min-height:100vh;
     & .admin-layout-wrap{
         width:100%;min-height:calc(100vh - 77px);display:flex;
         & .layout-content{box-sizing:border-box;width:100%;}
