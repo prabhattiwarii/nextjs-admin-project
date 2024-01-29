@@ -14,7 +14,7 @@ const Wrap = styled.div`
             & .top-wrap{
                 display:flex;justify-content:space-between;align-items:center;padding:10px;background:${colors.blue};
                 & .heading{color:${colors.white};font-size:16px;}
-                & .add-btn{color:${colors.white};background:${colors.darkBlue};border:none;padding:0 10px;height:35px;border-radius:5px;}
+                & .add-btn{color:${colors.white};background:${colors.darkBlue};border:none;padding:0 10px;height:35px;border-radius:5px;cursor:pointer;}
             }
             & .body-wrap{
                 & .field-wrap{display:flex;max-width:400px;width:100%;}
@@ -36,7 +36,7 @@ const user = () => {
                     <div className="box">
                         <div className="top-wrap">
                             <div className="heading">USER LISTS</div>
-                            <button className="add-btn" type="button">Add User</button>
+                            <button className="add-btn" type="button" onClick={() => window.location = "/admin/user/add"}>Add User</button>
                         </div>
                     </div>
                     <DataTable/>

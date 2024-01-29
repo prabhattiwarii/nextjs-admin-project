@@ -1,6 +1,6 @@
-import colors from "@/constants/Colors";
-import { deleteIcon, downloadIcon, editIcon,sortdownIcon, sortupIcon } from "@/helpers/Icon";
 import React from "react";
+import colors from "@/constants/Colors";
+import {deleteIcon,editIcon,sortupIcon } from "@/helpers/Icon";
 import styled from "styled-components";
 
 const Wrap = styled.div`
@@ -62,9 +62,9 @@ const DataTable = () => {
                     <table className="table">
                         <thead className="head">
                             <tr className="row">
-                                <th className="table-head"><span className="sort-icon">{sortupIcon({width:11,height:11,fill:colors.white})} {sortdownIcon({width:11,height:11,fill:colors.white})}</span> <span>Name</span></th>
-                                <th className="table-head"><span className="sort-icon">{sortupIcon({width:11,height:11,fill:colors.white})} {sortdownIcon({width:11,height:11,fill:colors.white})}</span> References</th>
-                                <th className="table-head"><span className="sort-icon">{sortupIcon({width:11,height:11,fill:colors.white})} {sortdownIcon({width:11,height:11,fill:colors.white})}</span> Mobile</th>
+                                <th className="table-head"><span className="sort-icon">{sortupIcon({width:11,height:11,fill:colors.white})}</span> <span>Name</span></th>
+                                <th className="table-head"><span className="sort-icon">{sortupIcon({width:11,height:11,fill:colors.white})}</span> References</th>
+                                <th className="table-head"><span className="sort-icon">{sortupIcon({width:11,height:11,fill:colors.white})}</span> Mobile</th>
                                 <th className="table-head">Action</th>
                             </tr>
                         </thead>
