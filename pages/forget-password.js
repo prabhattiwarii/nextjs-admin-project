@@ -3,7 +3,7 @@ import Head from "next/head";
 import frontend from "@/constants/Frontend";
 import {hasValidationError,validationError,focusOnFeild,} from "@/helpers/GlobalHelpers";
 
-const forgetpassword = () => {
+const Forgetpassword = () => {
     const [form, setForm] = useState({email: "",old_password: "",new_password: "",remember_me: false,otp: ""});
     const [errors, setErrors] = useState([]);
     const [submitting, setSubmitting] = useState(false);
@@ -74,4 +74,4 @@ const forgetpassword = () => {
     );
 };
 
-export default forgetpassword;
+export default Forgetpassword;

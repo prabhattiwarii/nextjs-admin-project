@@ -68,12 +68,12 @@ const Sidebar = ({page,showSidebar}) => {
     ]
     return (
         <Wrap showSidebar={showSidebar}>
-            <div className={`user-info ${showSidebar ? "active-user" : ""}`}>
+            <Link className={`user-info ${showSidebar ? "active-user" : ""}`} href="/admin/profile">
                 <div className="info-img">
                     <Image src="/assets/images/logged-user.jpg" alt="" layout="fill" objectFit="cover" fill />
                 </div>
                 <span className={`info-name ${showSidebar ? "active" : ""}`}>Anubhav</span>
-            </div>
+            </Link>
             {navbar &&
                 navbar.map((nav, index) => (
                     <div key={index} className="nav-wrap">

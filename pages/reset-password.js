@@ -5,7 +5,7 @@ import {passHideIcon,passShowIcon} from "@/helpers/Icon";
 import {hasValidationError,validationError,focusOnFeild} from "@/helpers/GlobalHelpers";
 import Head from "next/head";
 
-const resetpassword = () => {
+const Resetpassword = () => {
     const [form, setForm] = useState({new_password: "",confirm_password: "",remember_me: false,});
     const [errors, setErrors] = useState([]);
     const [passwordVisible, setPasswordVisible] = useState(false);
@@ -104,4 +104,4 @@ const resetpassword = () => {
     );
 };
 
-export default resetpassword;
+export default Resetpassword;

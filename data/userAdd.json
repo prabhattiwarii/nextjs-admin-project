@@ -1,0 +1,16 @@
+{
+  "useradd": {
+    "f_name": "aa",
+    "phone": "qwwwqqwqww",
+    "password": "233223232",
+    "references": "1",
+    "limit": "32333333",
+    "status": "1",
+    "ref_comm_joddi": "21",
+    "ref_comm_harf": "21",
+    "ref_patti": "21",
+    "user_comm_joddi": "12",
+    "user_comm_harf": "22",
+    "user_patti": "21"
+  }
+}
